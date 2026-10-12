@@ -1,0 +1,30 @@
+.trip-notes-content {
+  text-align: left;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.trip-notes-content h1,
+.trip-notes-content h2,
+.trip-notes-content h3 {
+  color: #93c5fd;
+  margin: 22px 0 10px;
+}
+
+.trip-notes-content p,
+.trip-notes-content li {
+  color: #dbe5f1;
+  line-height: 1.8;
+}
+
+.trip-notes-content strong {
+  color: #ffffff;
+}
+
+.trip-notes-content ul {
+  padding-left: 22px;
+}
+
+.trip-notes-content li {
+  margin-bottom: 8px;
+}

@@ -1,0 +1,481 @@
+
+.ai-planner-page {
+  min-height: 100vh;
+  padding: 40px 6%;
+  color: #edf2f7;
+  background:
+    radial-gradient(ellipse at 50% 0%, #202d39 0%, #121a22 45%, #0d1115 100%);
+}
+
+.ai-planner-header {
+  max-width: 850px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.ai-back-link {
+  display: inline-block;
+  margin-bottom: 36px;
+  color: #b8c9d8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.ai-back-link:hover {
+  color: #ffffff;
+}
+
+.ai-eyebrow {
+  margin-bottom: 12px;
+  color: #9db9cf;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.ai-planner-header h1 {
+  margin: 0;
+  color: #f5f7fa;
+  font-size: clamp(34px, 5vw, 54px);
+  letter-spacing: -1.5px;
+}
+
+.ai-intro {
+  max-width: 570px;
+  margin: 16px auto 0;
+  color: #aebbc7;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ai-planner-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 26px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.ai-planner-form-card,
+.ai-result-card {
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid rgba(190, 210, 226, 0.13);
+  border-radius: 18px;
+  background: rgba(19, 28, 37, 0.88);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+}
+
+.ai-planner-form-card h2,
+.ai-result-card h2 {
+  margin: 0;
+  color: #f2f5f8;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+}
+
+.ai-card-description {
+  margin: 10px 0 28px;
+  color: #9eacb9;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ai-planner-form-card label,
+.ai-interests legend {
+  display: block;
+  margin-bottom: 9px;
+  color: #e1e8ee;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ai-planner-form-card input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 22px;
+  padding: 13px 14px;
+  border: 1px solid #344451;
+  border-radius: 9px;
+  outline: none;
+  background: #101820;
+  color: #f2f5f8;
+  font: inherit;
+  font-size: 14px;
+  color-scheme: dark;
+}
+
+.ai-planner-form-card input:focus {
+  border-color: #89aeca;
+  box-shadow: 0 0 0 3px rgba(137, 174, 202, 0.12);
+}
+
+.ai-planner-form-card input::placeholder {
+  color: #758594;
+}
+
+.ai-date-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.ai-date-grid > div {
+  min-width: 0;
+}
+
+.ai-interests {
+  min-width: 0;
+  margin: 0 0 24px;
+  padding: 0;
+  border: 0;
+}
+
+.ai-interests legend {
+  margin-bottom: 8px;
+}
+
+.ai-interests > p {
+  margin: 0 0 14px;
+  color: #8f9eac;
+  font-size: 12px;
+}
+
+.ai-interest-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.ai-interest {
+  padding: 9px 13px;
+  border: 1px solid #344451;
+  border-radius: 30px;
+  background: #111a22;
+  color: #b9c6d1;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.ai-interest:hover {
+  border-color: #8ba9bf;
+  color: #ffffff;
+}
+
+.ai-interest.active {
+  border-color: #91b3cd;
+  background: #263b4b;
+  color: #ffffff;
+}
+
+.ai-generate-button {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #a3bfd3;
+  border-radius: 9px;
+  background: #d6e4ee;
+  color: #14212b;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ai-generate-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #edf5fa;
+}
+
+.ai-generate-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.ai-error {
+  margin: 0 0 16px;
+  color: #ffaaaa;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ai-result-card > .ai-eyebrow {
+  margin-top: 2px;
+}
+
+.ai-empty-state {
+  display: flex;
+  min-height: 300px;
+  margin-top: 22px;
+  padding: 28px;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px dashed #354654;
+  border-radius: 13px;
+  background: rgba(10, 17, 23, 0.45);
+}
+
+.ai-empty-state h3 {
+  margin: 0 0 12px;
+  color: #dce5ec;
+  font-size: 19px;
+}
+
+.ai-empty-state p {
+  max-width: 360px;
+  margin: 0;
+  color: #9baab7;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.ai-loading-state {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #dce5ec;
+  text-align: center;
+}
+
+.ai-loader {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 18px;
+  border: 3px solid #344451;
+  border-top-color: #d6e4ee;
+  border-radius: 50%;
+  animation: ai-spin 0.8s linear infinite;
+}
+
+@keyframes ai-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ai-loading-state p {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ai-loading-state span {
+  color: #94a4b2;
+  font-size: 12px;
+}
+
+.ai-itinerary-content {
+  margin-top: 22px;
+  color: #c4d0da;
+  font-size: 14px;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.ai-disclaimer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #34414d;
+  color: #91a0ad;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+  .ai-planner-layout {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+
+  .ai-planner-header {
+    margin-bottom: 30px;
+  }
+
+  .ai-planner-form-card,
+  .ai-result-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-planner-page {
+    padding: 24px 16px 36px;
+  }
+
+  .ai-date-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .ai-planner-form-card,
+  .ai-result-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .ai-planner-header h1 {
+    letter-spacing: -0.8px;
+  }
+
+  .ai-empty-state {
+    min-height: 220px;
+    padding: 20px;
+  }
+}
+.ai-itinerary-content h1,
+.ai-itinerary-content h2,
+.ai-itinerary-content h3 {
+  color: #f1f5f9;
+  line-height: 1.4;
+}
+
+.ai-itinerary-content p,
+.ai-itinerary-content li {
+  color: #dbe5f1;
+  line-height: 1.8;
+}
+
+.ai-itinerary-content strong {
+  color: #ffffff;
+}
+
+.ai-itinerary-content ul {
+  padding-left: 24px;
+}
+
+.ai-itinerary-content h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.ai-itinerary-content h2 {
+  font-size: 21px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+/* Distinct, premium itinerary design */
+.ai-result-card {
+  background:
+    radial-gradient(ellipse at top right, rgba(96, 165, 250, 0.10), transparent 45%),
+    #111b25;
+  border: 1px solid #304152;
+}
+
+.ai-result-card > .ai-eyebrow {
+  color: #8dbdf5;
+}
+
+.ai-itinerary-content {
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.ai-itinerary-content h1 {
+  font-size: 27px;
+  font-weight: 750;
+  text-align: left;
+  color: #93c5fd;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #304152;
+}
+
+.ai-itinerary-content h2 {
+  font-size: 19px;
+  color: #f1f5f9;
+  margin-top: 26px;
+  padding: 12px 14px;
+  background: #1b2a39;
+  border-left: 3px solid #7cb5f5;
+  border-radius: 0 9px 9px 0;
+}
+
+.ai-itinerary-content h3 {
+  color: #bfdbfe;
+  font-size: 17px;
+}
+
+.ai-itinerary-content p {
+  color: #cbd5e1;
+  line-height: 1.75;
+  margin: 12px 0;
+}
+
+.ai-itinerary-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ai-itinerary-content li {
+  color: #dbe5f1;
+  line-height: 1.8;
+  padding: 9px 12px;
+  margin: 7px 0;
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 7px;
+}
+
+.ai-itinerary-content strong {
+  color: #ffffff;
+}
+
+.ai-itinerary-content hr {
+  border: 0;
+  border-top: 1px solid #304152;
+  margin: 22px 0;
+}
+
+.ai-disclaimer {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #304152;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ai-result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.ai-result-actions .ai-generate-button,
+.ai-new-trip-button {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ai-new-trip-button {
+  color: #dbeafe;
+  background: transparent;
+  border: 1px solid #45617b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ai-new-trip-button:hover {
+  background: #1b2a39;
+  border-color: #7cb5f5;
+}
+
+.ai-result-actions button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.ai-success {
+  color: #86efac;
+  text-align: center;
+  line-height: 1.6;
+  margin: 4px 0;
+}
